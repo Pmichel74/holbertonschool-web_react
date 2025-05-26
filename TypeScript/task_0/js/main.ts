@@ -23,20 +23,20 @@ const student2: Student = {
 };
 
 // Créer un tableau contenant les deux étudiants
-const studentsList: Array<Student> = [student1, student2];
+const studentsList: Student[] = [student1, student2];
 
 // Récupérer l'élément body du DOM
-const body: HTMLBodyElement = document.getElementsByTagName('body')[0];
+const body = document.getElementsByTagName('body')[0];
 
 // Créer les éléments de structure du tableau
-const table: HTMLTableElement = document.createElement('table');
-const thead: HTMLTableSectionElement = document.createElement('thead');
-const tbody: HTMLTableSectionElement = document.createElement('tbody');
+const table = document.createElement('table');
+const thead = document.createElement('thead');
+const tbody = document.createElement('tbody');
 
 // Créer la ligne d'en-tête et les cellules
-const headerRow: HTMLTableRowElement = document.createElement('tr');
-const firstNameHeader: HTMLTableCellElement = document.createElement('th');
-const locationHeader: HTMLTableCellElement = document.createElement('th');
+const headerRow = document.createElement('tr');
+const firstNameHeader = document.createElement('th');
+const locationHeader = document.createElement('th');
 
 // Définir le texte des en-têtes
 firstNameHeader.textContent = 'Prénom';
@@ -50,9 +50,9 @@ thead.appendChild(headerRow);
 // Parcourir le tableau des étudiants pour créer les lignes du tableau
 studentsList.forEach((student: Student) => {
   // Créer une ligne et des cellules pour chaque étudiant
-  const row: HTMLTableRowElement = document.createElement('tr');
-  const firstNameCell: HTMLTableCellElement = document.createElement('td');
-  const locationCell: HTMLTableCellElement = document.createElement('td');
+  const row = document.createElement('tr');
+  const firstNameCell = document.createElement('td');
+  const locationCell = document.createElement('td');
 
   // Définir le contenu des cellules avec les données de l'étudiant
   firstNameCell.textContent = student.firstName;
