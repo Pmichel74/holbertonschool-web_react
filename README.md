@@ -292,7 +292,7 @@ module.exports = {
 };
 ```
 
-### Configuration TypeScript
+### TypeScript Configuration
 ```json
 {
   "compilerOptions": {
@@ -359,9 +359,9 @@ npm run test -- --coverage
 npm run test -- --watch
 ```
 
-### Structure des tests
+### Test Structure
 ```typescript
-// Exemple de test pour task_1
+// Example test for task_1
 describe('Teacher Interface', () => {
   test('should create teacher with required properties', () => {
     const teacher: Teacher = {
@@ -377,9 +377,9 @@ describe('Teacher Interface', () => {
 });
 ```
 
-## 🔧 Configuration Webpack
+## 🔧 Webpack Configuration
 
-### Configuration de base (toutes les tâches)
+### Basic Configuration (all tasks)
 ```javascript
 module.exports = {
   mode: "development",
@@ -412,9 +412,9 @@ module.exports = {
 };
 ```
 
-## 🚀 Exemples d'Utilisation
+## 🚀 Usage Examples
 
-### Task 1 - Création d'un Teacher
+### Task 1 - Creating a Teacher
 ```typescript
 const teacher: Teacher = {
   firstName: 'Guillaume',
@@ -422,13 +422,13 @@ const teacher: Teacher = {
   fullTimeEmployee: false,
   yearsOfExperience: 5,
   location: 'London',
-  contract: false, // Propriété dynamique
+  contract: false, // Dynamic property
 };
 
 console.log(printTeacher('Guillaume', 'Salva')); // "G. Salva"
 ```
 
-### Task 2 - Factory Pattern avec Types
+### Task 2 - Factory Pattern with Types
 ```typescript
 const director = createEmployee(1000);    // Director
 const teacher = createEmployee(200);      // Teacher
@@ -437,9 +437,9 @@ console.log(executeWork(director));       // "Getting to director tasks"
 console.log(executeWork(teacher));        // "Getting to work"
 ```
 
-### Task 4 - Architecture Namespace
+### Task 4 - Namespace Architecture
 ```typescript
-// Utilisation des classes de sujets
+// Using subject classes
 const cpp = new Subjects.Cpp();
 const teacher: Subjects.Teacher = {
   firstName: 'John',
@@ -452,92 +452,92 @@ console.log(cpp.getRequirements());       // "Here is the list of requirements f
 console.log(cpp.getAvailableTeacher());   // "Available Teacher: John"
 ```
 
-## 🎯 Bonnes Pratiques Appliquées
+## 🎯 Applied Best Practices
 
 ### 📋 Code Style
-- ✅ **Indentation:** 2 espaces (ESLint)
-- ✅ **Quotes:** Simple quotes pour strings
-- ✅ **Semicolons:** Obligatoires
-- ✅ **Trailing commas:** Dans les objets multi-lignes
-- ✅ **Type annotations:** Explicites quand nécessaire
+- ✅ **Indentation:** 2 spaces (ESLint)
+- ✅ **Quotes:** Single quotes for strings
+- ✅ **Semicolons:** Required
+- ✅ **Trailing commas:** In multi-line objects
+- ✅ **Type annotations:** Explicit when necessary
 
 ### 🏗️ Architecture
-- ✅ **Separation of concerns:** Un fichier par responsabilité
-- ✅ **Namespaces:** Pour l'organisation modulaire
-- ✅ **Interfaces:** Pour définir des contrats clairs
-- ✅ **Type guards:** Pour la validation runtime
+- ✅ **Separation of concerns:** One file per responsibility
+- ✅ **Namespaces:** For modular organization
+- ✅ **Interfaces:** To define clear contracts
+- ✅ **Type guards:** For runtime validation
 
 ### 🔒 Type Safety
 - ✅ **Strict mode:** `noImplicitAny`, `strictNullChecks`
-- ✅ **Declaration merging:** Pour l'extensibilité
-- ✅ **Union types:** Pour la flexibilité contrôlée
-- ✅ **Brand types:** Pour éviter les erreurs de types similaires
+- ✅ **Declaration merging:** For extensibility
+- ✅ **Union types:** For controlled flexibility
+- ✅ **Brand types:** To avoid similar type errors
 
-## 📈 Progression d'Apprentissage
+## 📈 Learning Progression
 
-| Task | Niveau | Concepts | Difficulté |
+| Task | Level | Concepts | Difficulty |
 |------|--------|----------|------------|
-| **Task 0** | 🟢 Débutant | Configuration | ⭐ |
-| **Task 1** | 🟢 Débutant | Interfaces, Classes | ⭐⭐ |
-| **Task 2** | 🟡 Intermédiaire | Types avancés, Guards | ⭐⭐⭐ |
-| **Task 3** | 🟡 Intermédiaire | Modules, Types ambiants | ⭐⭐⭐ |
-| **Task 4** | 🔴 Avancé | Namespaces, Declaration merging | ⭐⭐⭐⭐ |
-| **Task 5** | 🔴 Avancé | Brand nominal typing | ⭐⭐⭐⭐ |
+| **Task 0** | 🟢 Beginner | Configuration | ⭐ |
+| **Task 1** | 🟢 Beginner | Interfaces, Classes | ⭐⭐ |
+| **Task 2** | 🟡 Intermediate | Advanced types, Guards | ⭐⭐⭐ |
+| **Task 3** | 🟡 Intermediate | Modules, Ambient types | ⭐⭐⭐ |
+| **Task 4** | 🔴 Advanced | Namespaces, Declaration merging | ⭐⭐⭐⭐ |
+| **Task 5** | 🔴 Advanced | Brand nominal typing | ⭐⭐⭐⭐ |
 
-## 🐛 Résolution de Problèmes
+## 🐛 Troubleshooting
 
-### Erreurs Communes
+### Common Errors
 
 #### ❌ "Cannot find name 'Teacher'"
 ```bash
-# Solution: Ajouter les références
+# Solution: Add references
 /// <reference path="Teacher.ts" />
 ```
 
 #### ❌ "Property 'teacher' does not exist"
 ```bash
-# Solution: Export des classes dans namespaces
+# Solution: Export classes in namespaces
 export class Subject { ... }
 ```
 
-#### ❌ Erreurs de build Webpack
+#### ❌ Webpack build errors
 ```bash
-# Nettoyer et réinstaller
+# Clean and reinstall
 rm -rf node_modules dist
 npm install
 npm run build
 ```
 
-## 👥 Contribution
+## 👥 Contributing
 
-### Structure des commits
+### Commit Structure
 ```bash
-# Format recommandé
+# Recommended format
 git commit -m "feat(task_X): implement feature description"
 git commit -m "fix(task_X): resolve issue description" 
 git commit -m "docs: update README with examples"
 ```
 
-### Standards de code
-1. **ESLint** doit passer sans erreurs
-2. **TypeScript** compilation sans erreurs
-3. **Tests** doivent passer (quand présents)
-4. **Documentation** mise à jour si nécessaire
+### Code Standards
+1. **ESLint** must pass without errors
+2. **TypeScript** compilation without errors
+3. **Tests** must pass (when present)
+4. **Documentation** updated if necessary
 
 ---
 
 ## 📞 Support
 
-### Ressources utiles
+### Useful Resources
 - 📚 [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 - 🛠️ [Webpack Documentation](https://webpack.js.org/concepts/)
 - 🎯 [ESLint TypeScript Rules](https://typescript-eslint.io/rules/)
 - 🧪 [Jest Testing Framework](https://jestjs.io/docs/getting-started)
 
 ### Contact
-- 📧 **École:** Holberton School
-- 🌐 **Projet:** Web React Development
-- 📅 **Année:** 2025
+- 📧 **School:** Holberton School
+- 🌐 **Project:** Web React Development
+- 📅 **Year:** 2025
 
 ---
 
