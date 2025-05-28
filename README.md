@@ -543,9 +543,9 @@ git commit -m "docs: update README with examples"
 
 <div align="center">
 
-**🎓 Projet éducatif Holberton School - TypeScript & React Development**
+**🎓 Holberton School Educational Project - TypeScript & React Development**
 
-*Apprentissage progressif des concepts avancés du développement web moderne*
+*Progressive learning of advanced modern web development concepts*
 
 [![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-blue.svg)](https://www.typescriptlang.org/)
 [![Holberton School](https://img.shields.io/badge/School-Holberton-red.svg)](https://www.holbertonschool.com/)
